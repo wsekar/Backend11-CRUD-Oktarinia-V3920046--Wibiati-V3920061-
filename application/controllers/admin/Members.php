@@ -44,7 +44,7 @@ class Members extends CI_Controller
                 $deskripsi = $this->input->post('deskripsi', TRUE);
                 $unit = $this->input->post('unit', TRUE);
 
-                $data = array(
+                $data = array( // variable data yang akan menampung sekumpulan data hasil inputan
                     'nama_member' => $nama_member,
                     'tanggal_lahir' => $tanggal_lahir,
                     'jenis_kelamin' => $jenis_kelamin,
@@ -56,7 +56,7 @@ class Members extends CI_Controller
                 );
                 // $member->save(); // simpan data ke database
                 $this->db->insert('tb_member', $data);
-                $this->session->set_flashdata('success', ' Data berhasil disimpan');
+                $this->session->set_flashdata('success', ' Data berhasil disimpan'); //notifikasi data berhasil disimpan
             }
             // menampilkan form add
             // $member = $this->M_member; // objek model
