@@ -33,18 +33,18 @@ class Members extends CI_Controller
             if (!$this->upload->do_upload('foto_member')) { //jika gambar dalam form tidak ada
                 $data['error'] = $this->upload->display_errors();
             } else {
-                $foto_member = $this->upload->data();
-                $foto_member = $foto_member['file_name'];
-                $nama_member = $this->input->post('nama_member', TRUE);
-                $tanggal_lahir = $this->input->post('tanggal_lahir', TRUE);
-                $jenis_kelamin = $this->input->post('jenis_kelamin', TRUE);
-                $kewarganegaraan = $this->input->post('kewarganegaraan', TRUE);
-                $email_member = $this->input->post('email_member', TRUE);
-                $password = $this->input->post('password', TRUE);
-                $deskripsi = $this->input->post('deskripsi', TRUE);
-                $unit = $this->input->post('unit', TRUE);
+                $foto_member = $this->upload->data(); // data upload foto
+                $foto_member = $foto_member['file_name']; 
+                $nama_member = $this->input->post('nama_member', TRUE); // inputan data nama_member
+                $tanggal_lahir = $this->input->post('tanggal_lahir', TRUE); // inputan data tanggal_lahir
+                $jenis_kelamin = $this->input->post('jenis_kelamin', TRUE); // inputan data jenis_kelamin
+                $kewarganegaraan = $this->input->post('kewarganegaraan', TRUE); // inputan data kewarganegaraan
+                $email_member = $this->input->post('email_member', TRUE); // inputan data email_member
+                $password = $this->input->post('password', TRUE); // inputan data password
+                $deskripsi = $this->input->post('deskripsi', TRUE); // inputan data dekripsi
+                $unit = $this->input->post('unit', TRUE); // inputan dataunit
 
-                $data = array( // variable data yang akan menampung sekumpulan data hasil inputan
+                $data = array( // variable data yang akan menampung sekumpulan data hasil inputan tadi
                     'nama_member' => $nama_member,
                     'tanggal_lahir' => $tanggal_lahir,
                     'jenis_kelamin' => $jenis_kelamin,
