@@ -91,7 +91,7 @@ class M_member extends CI_Model
         $this->email_member = $post["email_member"];
         $this->password = $post["password"];
         $this->unit = $post["unit"];
-        // $this->foto_member = $post["foto_member"];
+        $this->foto_member = $post["foto_member"];
         $this->deskripsi = $post["deskripsi"];
         return $this->db->update($this->_table, $this, array('id_member' => $post['id']));
     }
