@@ -94,10 +94,10 @@
                             <!--input field sub unit-->
                             <div class="form-group">
                                 <label for="unit">Sub-Unit</label><br />
-                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit" id="nctu" value="NCT U" />NCT U
-                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit" id="nct127" value="NCT 127" />NCT 127
-                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit" id="nctdream" value="NCT DREAM" />NCT DREAM
-                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit" id="wayv" value="NCT DREAM" />WayV
+                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit[]" id="nctu" value="NCT U" />NCT U
+                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit[]" id="nct127" value="NCT 127" />NCT 127
+                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit[]" id="nctdream" value="NCT DREAM" />NCT DREAM
+                                <input <?php echo form_error('unit') ? 'is-invalid' : '' ?> type="checkbox" name="unit[]" id="wayv" value="NCT DREAM" />WayV
                                 <div class="invalid-feedback">
                                     <?php echo form_error('unit') ?>
                                 </div>
